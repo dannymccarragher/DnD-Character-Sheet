@@ -21,7 +21,7 @@ services:
       - database
     build: ./character-sheet-back-end
     ports:
-      - "5000:5000"
+      - "5050:5000"
     env_file:
       - .env
     environment:
