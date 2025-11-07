@@ -52,7 +52,7 @@ describe("POST /api/login route", () => {
     const jwt = require("jsonwebtoken");
 
     // mocks bcrypt to return true and mocks jwt to return a mock token
-    jest.spyOn(bcrypt, "compare").mockResolvedValue(true);
+    jest.spyOn(bcrypt, "compare").mockReturnValue(true);
     jest.spyOn(jwt, "sign").mockReturnValue("mock-token");
 
     // mocks database to return a user with hashed password
